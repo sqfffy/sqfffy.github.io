@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col min-h-screen">
+    <!-- Scrollable Container -->
+    <div class="flex-grow overflow-auto p-4 bg-gray-100">
+        <div class="max-w-[210mm] mx-auto transform scale-75 origin-top">
+            <!-- Page 1 -->
+            <div class="mb-8 bg-white shadow-md" style="width: 210mm; height: 297mm; margin: 10mm auto;">
+                <div style="padding: 20mm; height: 100%; display: flex; flex-direction: column;">
+                    <!-- Header Section -->
+                    <div class="text-center border-b pb-4 mb-4">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-2">John Doe</h2>
+                        <p class="text-base md:text-lg text-gray-600 mb-1">Senior Software Engineer</p>
+                        <p class="text-xs md:text-sm text-gray-600">
+                            john@example.com • (555) 123-4567 • San Francisco, CA
+                        </p>
+                    </div>
+
+                    <!-- Summary Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Professional Summary</h3>
+                        <p class="text-sm md:text-base text-gray-600">
+                            Experienced software engineer with 5+ years of expertise in full-stack development, 
+                            specializing in React, Node.js, and cloud technologies. Proven track record of delivering 
+                            scalable solutions and leading development teams.
+                        </p>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            {% for skill in ['React', 'TypeScript', 'Node.js', 'Python', 'AWS', 'Docker', 'MongoDB', 'GraphQL', 'Git', 'Agile'] %}
+                                <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs md:text-sm">
+                                    {{ skill }}
+                                </span>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Work Experience</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex flex-col md:flex-row md:justify-between mb-1">
+                                    <h4 class="text-base md:text-lg font-medium">Senior Software Engineer - Tech Corp</h4>
+                                    <span class="text-sm text-gray-600">Feb 2020 - Present</span>
+                                </div>
+                                <ul class="list-disc list-inside text-sm md:text-base text-gray-600 space-y-1">
+                                    <li>Led development of microservices architecture serving 1M+ users</li>
+                                    <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                                    <li>Mentored junior developers and conducted code reviews</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="flex flex-col md:flex-row md:justify-between mb-1">
+                                    <h4 class="text-base md:text-lg font-medium">Software Engineer - StartUp Inc</h4>
+                                    <span class="text-sm text-gray-600">May 2018 - Jan 2020</span>
+                                </div>
+                                <ul class="list-disc list-inside text-sm md:text-base text-gray-600 space-y-1">
+                                    <li>Developed responsive web applications using React and TypeScript</li>
+                                    <li>Optimized database queries improving performance by 40%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Education</h3>
+                        <div class="flex flex-col md:flex-row md:justify-between">
+                            <div>
+                                <h4 class="text-base md:text-lg font-medium">Bachelor of Science in Computer Science</h4>
+                                <p class="text-sm md:text-base text-gray-600">University of Technology</p>
+                            </div>
+                            <span class="text-sm md:text-base text-gray-600">2014 - 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 2 -->
+            <div class="mb-8 bg-white shadow-md" style="width: 210mm; height: 297mm; margin: 10mm auto;">
+                <div style="padding: 20mm; height: 100%; display: flex; flex-direction: column;">
+                    <!-- Projects Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Key Projects</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-base md:text-lg font-medium">E-commerce Platform Redesign</h4>
+                                <p class="text-sm md:text-base text-gray-600">Led a team of 5 developers in redesigning and optimizing a high-traffic e-commerce platform, resulting in a 30% increase in conversion rates and 25% improvement in page load times.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-medium">AI-Powered Chatbot</h4>
+                                <p class="text-sm md:text-base text-gray-600">Developed an AI-powered chatbot using natural language processing techniques, improving customer support efficiency by 40% and reducing response times by 60%.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Certifications</h3>
+                        <ul class="list-disc list-inside text-sm md:text-base text-gray-600 space-y-1">
+                            <li>AWS Certified Solutions Architect - Associate</li>
+                            <li>Google Cloud Professional Cloud Developer</li>
+                            <li>Microsoft Certified: Azure Developer Associate</li>
+                        </ul>
+                    </div>
+
+                    <!-- Publications Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Publications</h3>
+                        <div class="space-y-2">
+                            <p class="text-sm md:text-base text-gray-600">"Optimizing React Applications for Performance" - Medium, 2022</p>
+                            <p class="text-sm md:text-base text-gray-600">"The Future of Serverless Architecture" - Tech Conference Proceedings, 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="mb-8 bg-white shadow-md" style="width: 210mm; height: 297mm; margin: 10mm auto;">
+                <div style="padding: 20mm; height: 100%; display: flex; flex-direction: column;">
+                    <!-- Professional Development Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Professional Development</h3>
+                        <ul class="list-disc list-inside text-sm md:text-base text-gray-600 space-y-1">
+                            <li>Regular attendee and speaker at local tech meetups and conferences</li>
+                            <li>Mentor for junior developers through company mentorship program</li>
+                            <li>Completed advanced courses in machine learning and data science</li>
+                        </ul>
+                    </div>
+
+                    <!-- Languages Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Languages</h3>
+                        <ul class="list-disc list-inside text-sm md:text-base text-gray-600 space-y-1">
+                            <li>English (Native)</li>
+                            <li>Spanish (Fluent)</li>
+                            <li>Mandarin Chinese (Intermediate)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Volunteer Work Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">Volunteer Work</h3>
+                        <div class="space-y-2">
+                            <p class="text-sm md:text-base text-gray-600">Code for Good - Developed web applications for local non-profit organizations</p>
+                            <p class="text-sm md:text-base text-gray-600">STEM Mentor - Taught coding basics to high school students</p>
+                        </div>
+                    </div>
+
+                    <!-- References Section -->
+                    <div class="mb-6 text-left">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-800 border-b pb-1">References</h3>
+                        <p class="text-sm md:text-base text-gray-600">Available upon request</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Button - Fixed at the bottom -->
+    <div class="p-4 bg-gray-100">
+        <div class="max-w-[210mm] mx-auto">
+            <a href="{{ url_for('generate_resume_pdf', id=1) }}" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 inline-block text-center">
+                Download PDF
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}g

@@ -1,4 +1,4 @@
-#!/Users/safiyyahussain/dev/resume-builder/.venv/bin/python
+#!/Users/aftab.hussain/dev/sqfffy.github.io/resume-builder/.venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -23,6 +23,10 @@ db.init_app(app)  # Initialize the db with the app
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@app.route('/preview')
+def preview():
+    return render_template('preview.html')
+
 # Upload route
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
